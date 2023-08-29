@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Counter</title>
+    <style>
+        /* Styling for the body */
+        body {
+            background-color: #3a003a; /* Darker purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Styling for the form */
+        form {
+            background-color: #2d002d; /* Darker purple */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        /* Styling for labels */
+        label {
+            background-color: #a52da5; /* Light purple */
+            padding: 5px 15px;
+            border-radius: 5px;
+            color: white; /* White text */
+        }
+        /* Styling for text inputs, submit button, and paragraphs */
+        input[type="text"], input[type="submit"], p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 5px 0;
+            color: white; /* White text */
+        }
+        /* Styling for text inputs and submit button */
+        input[type="text"], input[type="submit"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+        /* Styling for text input */
+        input[type="text"] {
+            width: 90%;
+            color: black; /* Black text */
+        }
+        /* Styling for submit button */
+        input[type="submit"] {
+            background-color: #a52da5; /* Light purple */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form for input -->
+    <form method="post">
+        <label for="text">Text</label>
+        <input type="text" id="text" name="text"><br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
